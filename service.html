@@ -179,7 +179,8 @@
             function chengeItem(itemtype, itemname) {
                 //top.location.href = "/NewOrder/Index?typecode=" + itemtype + "&typename=" + escape(itemname);
                 var city = $("#curCity").html();
-                window.open('/App/SortContent/ItemInfo?ItemCode=' + itemtype + '&City=' + city);
+                //window.open('/App/SortContent/ItemInfo?ItemCode=' + itemtype + '&City=' + city);
+                top.location.href="detail.html";
             }
     </script>
     </div>
