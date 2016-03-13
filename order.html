@@ -220,7 +220,7 @@
                 </p>
                 <p style="font-size: 14px;">
                     <label>
-                        &nbsp;</label>点击“立即预约”，即表示同意<a href="http://www.hongjimeng.net/About/Index?id=6"
+                        &nbsp;</label>点击“立即预约”，即表示同意<a href="about.html"
                             class="green">《美临家政用户协议》</a>
                 </p>
             </div>
@@ -268,8 +268,7 @@
                 <img src="./images/a.png" width="57" height="49" class="hides">
                 <img src="./images/wexin.png" width="145" class="2wm" style="display: none; margin: -100px 57px 0 0">
             </a></li>
-            <li><a href="javascript:void(0)" onclick="kf_openChatWindow(0,&#39;b&#39;,&#39;4006116321&#39;);return false;"
-                target="_blank">
+            <li><a href="javascript:void(0)">
                 <div class="hides" style="width: 161px; display: none;" id="qq">
                     <div class="hides" id="p1">
                         <img src="./images/l04.png">
@@ -353,24 +352,8 @@
                 </div>
                 <div class="log-page">
                     <div class="classify-small">
-                        <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;北京&#39;);">
-                            北京</button>
-                        <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;上海&#39;);">
-                            上海</button>
-                        <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;天津&#39;);">
-                            天津</button>
-                        <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;郑州&#39;);">
-                            郑州</button>
                         <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;武汉&#39;);">
                             武汉</button>
-                        <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;西安&#39;);">
-                            西安</button>
-                        <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;长沙&#39;);">
-                            长沙</button>
-                        <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;成都&#39;);">
-                            成都</button>
-                        <button class="btn js-city" type="button" onclick="WinSelectCity(&#39;南京&#39;);">
-                            南京</button>
                     </div>
                 </div>
             </div>
@@ -857,7 +840,8 @@
             }, function (result) {
                 var json = eval('(' + result + ')');
                 if (json.success) {
-                    window.location.href = "/NewOrder/OrderQueRen";
+                    //window.location.href = "/NewOrder/OrderQueRen";
+                    alert("信息提交中！");
 
                 }
             });
