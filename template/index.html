@@ -1,0 +1,608 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <title>美临家政</title>
+    <meta name="description" content="美临家政">
+    <link rel="stylesheet" type="text/css" href="./css/hongjijiazheng.css">
+    <link rel="stylesheet" href="./css/lrtk.css">
+    <script src="./js/jquery.min.js"></script>
+    <script type="text/javascript">
+        function selCity(val) {
+            location.href = "/Default/Index?CurCity=" + val;
+        }
+    </script>
+</head>
+<body>
+    <div class="wel">
+        <ul class="wel2">
+            <li>欢迎,来到美临家政！ </li>
+            <li class=" tright"><a href="#" class="green"></a></li>
+        </ul>
+    </div>
+    <div class="header">
+        <div class="body top">
+            <div class="logo">
+                <img src="./images/logo.png">
+                <div id="daohang" style="display: none;">
+                    <li class="tab dropdown"><a href="#" class="tablink arwlink" id="curCity">武汉 </a>
+                        <ul class="subnav">
+                            <a href="javascript:void(0)" onclick="selCity(&#39;北京&#39;);" title="北京">北京</a>
+                            <a href="javascript:void(0)" onclick="selCity(&#39;上海&#39;);" title="上海">上海</a>
+                            <a href="javascript:void(0)" onclick="selCity(&#39;天津&#39;);" title="天津">天津</a>
+                            <a href="javascript:void(0)" onclick="selCity(&#39;郑州&#39;);" title="郑州">郑州</a>
+                            <a href="javascript:void(0)" onclick="selCity(&#39;武汉&#39;);" title="武汉">武汉</a>
+                            <a href="javascript:void(0)" onclick="selCity(&#39;西安&#39;);" title="西安">西安</a>
+                            <a href="javascript:void(0)" onclick="selCity(&#39;长沙&#39;);" title="长沙">长沙</a>
+                            <a href="javascript:void(0)" onclick="selCity(&#39;成都&#39;);" title="成都">成都</a>
+                            <a href="javascript:void(0)" onclick="selCity(&#39;南京&#39;);" title="南京">南京</a>
+                        </ul>
+                    </li>
+                </div>
+            </div>
+            <div class="tel">
+                <img src="./images/h-tel.png">
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="body nav">
+            <a href="index.html" class="navselect">首页</a> <a href="order.html">快速下单</a> <a href="service.html">
+                服务介绍</a> <a href="superiority.html">美临优势</a> <a href="member.html">加入会员</a>
+            <a href="news.html">新闻动态</a> <a href="job.html">美临招聘</a> <a href="about.html">关于我们</a>
+        </div>
+    </div>
+    <style type="text/css">
+        .slide
+        {
+            position: relative;
+            overflow: auto;
+            height: 0;
+        }
+        .slide li
+        {
+            position: relative;
+            list-style: none;
+        }
+        .slide li img
+        {
+            max-width: 100%;
+        }
+        .slide ul li
+        {
+            text-align: center;
+            width: 100%;
+            height: 459px;
+        }
+        .slide .dots
+        {
+            position: absolute;
+            left: 46%;
+            bottom: 5px;
+        }
+        .slide .dots li.active
+        {
+            background: #FFFFFF;
+            opacity: 1;
+        }
+        .slide .dots li
+        {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: 0 4px;
+            text-indent: -999em;
+            background: #D9D9D9;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: .4;
+            -webkit-transition: background .5s, opacity .5s;
+            -moz-transition: background .5s, opacity .5s;
+            transition: background .5s, opacity .5s;
+        }
+    </style>
+    <!-- 代码 开始 -->
+    <div class="slide slide-banner-big has-dots" id="fsD1" style="width: 1816px; height: 460px;
+        overflow: hidden;">
+        <ul style="position: relative; left: -116.466%; width: 300%; height: 460px; overflow: hidden;">
+            <li style="float: left; width: 1816px; background: url('images/banner.png') 50% 50% no-repeat;">
+                <dl class="app">
+                    <dd style="width: 282px; margin: auto; margin-left: 100px;">
+                        <a href="#">
+                            <img src="./images/ljyy.png"></a>
+                    </dd>
+                    <dd style="margin-top: 60px; margin-right: 130px;">
+                        <a href="#">
+                            <img src="./images/Android.png"></a>
+                    </dd>
+                    <dd style="margin-top: 10px; margin-right: 130px;">
+                        <a href="#">
+                            <img src="./images/iOS.png"></a>
+                    </dd>
+                </dl>
+            </li>
+            <li style="float: left; width: 1816px; background: url('images/banner2.png') 50% 50% no-repeat;">
+                <img width="100%" src="./images/banner2.png">
+            </li>
+            <li style="float: left; width: 1816px; background: url('images/banner3.png') 50% 50% no-repeat;">
+                <img width="100%" src="./images/banner3.png">
+            </li>
+        </ul>
+        <ol class="dots">
+            <li class="dot">1</li><li class="dot">2</li><li class="dot active">3</li></ol>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $('.slide-banner-big').unslider({
+                speed: 1000,
+                dots: true,
+                height: 460,
+                width: '1920',
+                complete: function (el, target) {
+                    var index = el.find('li').index(target);
+                    $('.slide-banner-big-des .each-des').removeClass('current');
+                    $('.slide-banner-big-des .each-des').eq(index).addClass('current');
+                }
+            });
+            (function () {
+                var $des = $('.slide-banner-big-des .each-des');
+                $des.on('click', function () {
+                    var index = $des.index($(this));
+                    $('.slide-banner-big .dot').eq(index).click();
+                });
+            })()
+
+
+            $(function () {
+                setTimeout(function () {
+                    $(".dp_bt").trigger("click");
+                    //$('.slide-banner-big').css("height", "459");
+                    //$('.slide-banner-big ul:first').find("li").each(function () {
+                    //    $(this).css("width", "100%");
+                    //});
+                }, 200);
+            });
+        });
+</script>
+    <div class="fwdd">
+        <div class="fw">
+            <div style="font-size: 28px;">
+                我们的服务
+            </div>
+            <div class="fwxm">
+                <dl>
+                    <dd onclick="chengeItem(&#39;JTQJ&#39;, &#39;家庭清洁&#39;);">
+                        <img src="./images/icon1.png">
+                        <p>
+                            家庭清洁
+                        </p>
+                        <i>
+                            <img src="./images/iconyes.png"></i>
+                    </dd>
+                    <dd onclick="chengeItem(&#39;KFQJ&#39;, &#39;空房清洁&#39;);">
+                        <img src="./images/icon2.png">
+                        <p>
+                            空房清洁
+                        </p>
+                        <i>
+                            <img src="./images/iconyes.png"></i>
+                    </dd>
+                    <dd onclick="chengeItem(&#39;KHQJ&#39;, &#39;开荒清洁&#39;);">
+                        <img src="./images/icon3.png">
+                        <p>
+                            开荒清洁
+                        </p>
+                        <i>
+                            <img src="./images/iconyes.png"></i>
+                    </dd>
+                    <dd onclick="chengeItem(&#39;CBL&#39;, &#39;擦玻璃&#39;);">
+                        <img src="./images/icon4.png">
+                        <p>
+                            擦玻璃
+                        </p>
+                        <i>
+                            <img src="./images/iconyes.png"></i>
+                    </dd>
+                    <dd onclick="chengeItem(&#39;DBBY&#39;, &#39;地板保养&#39;);">
+                        <img src="./images/icon5.png">
+                        <p>
+                            地板保养
+                        </p>
+                        <i>
+                            <img src="./images/iconyes.png"></i>
+                    </dd>
+                    <dd onclick="chengeItem(&#39;DTQX&#39;, &#39;地毯清洗&#39;);">
+                        <img src="./images/icon6.png">
+                        <p>
+                            地毯清洗
+                        </p>
+                        <i>
+                            <img src="./images/iconyes.png"></i>
+                    </dd>
+                    <dd onclick="chengeItem(&#39;SFQX&#39;, &#39;沙发清洗&#39;);">
+                        <img src="./images/icon7.png">
+                        <p>
+                            沙发清洗
+                        </p>
+                        <i>
+                            <img src="./images/iconyes.png"></i>
+                    </dd>
+                    <dd onclick="chengeItem(&#39;CLQX&#39;, &#39;窗帘清洗&#39;);">
+                        <img src="./images/icon8.png">
+                        <p>
+                            窗帘清洗
+                        </p>
+                        <i>
+                            <img src="./images/iconyes.png"></i>
+                    </dd>
+                </dl>
+                <script type="text/javascript">
+                    function chengeItem(itemtype, itemname) {
+                        top.location.href = "detail.html?typecode=" + itemtype + "&typename=" + escape(itemname);
+
+                    }
+            </script>
+            </div>
+        </div>
+        <!--.fw结束-->
+        <div class="dd">
+            <div style="font-size: 28px; text-indent: 22px;">
+                最新订单
+            </div>
+            <div class="fwqk2">
+                <dl>
+                    <dd>
+                        服务项目
+                    </dd>
+                    <dd>
+                        姓名
+                    </dd>
+                    <dd>
+                        电话
+                    </dd>
+                    <dd>
+                        时间
+                    </dd>
+                </dl>
+            </div>
+            <div style="height: 285px; overflow: hidden;">
+                <ul class="fwqkz" style="margin-top: -15.9419px;">
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                女**
+                            </dd>
+                            <dd>
+                                1563****697
+                            </dd>
+                            <dd>
+                                15 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                李**
+                            </dd>
+                            <dd>
+                                1869****533
+                            </dd>
+                            <dd>
+                                17 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                闻**
+                            </dd>
+                            <dd>
+                                1822****886
+                            </dd>
+                            <dd>
+                                17 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                郝**
+                            </dd>
+                            <dd>
+                                1347****935
+                            </dd>
+                            <dd>
+                                19 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                1**
+                            </dd>
+                            <dd>
+                                1332****226
+                            </dd>
+                            <dd>
+                                20 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                1**
+                            </dd>
+                            <dd>
+                                1588****585
+                            </dd>
+                            <dd>
+                                6 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                冰箱保养
+                            </dd>
+                            <dd>
+                                杨**
+                            </dd>
+                            <dd>
+                                1520****027
+                            </dd>
+                            <dd>
+                                9 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                刘**
+                            </dd>
+                            <dd>
+                                1580****736
+                            </dd>
+                            <dd>
+                                10 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                1**
+                            </dd>
+                            <dd>
+                                1820****517
+                            </dd>
+                            <dd>
+                                11 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="fwqk">
+                        <dl>
+                            <dd>
+                                家庭清洁
+                            </dd>
+                            <dd>
+                                余**
+                            </dd>
+                            <dd>
+                                1393****600
+                            </dd>
+                            <dd>
+                                14 秒前
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div>
+                </div>
+                <!--.dd结束-->
+                <script>
+                    function run() {
+
+                        $(".fwqkz").animate({
+                            marginTop: -30
+                        }, 500, function () {
+                            $(".fwqkz").css({
+                                marginTop: 0
+                            });
+                            $(".fwqkz .fwqk:first").insertAfter($(".fwqkz .fwqk:last"));
+                        })
+                    }
+
+                    var timer = setInterval(run, 1000)
+            </script>
+            </div>
+        </div>
+        <div class="index_more">
+            <a href="service.html">
+                <img src="./images/indexmore.png"></a>
+        </div>
+    </div>
+    <div class="td">
+        <ul>
+            <li>
+                <img src="./images/td01.png">
+                <h4>
+                    专业</h4>
+                <p>
+                    美临家政保洁师经过严格的培训，在具体的工作实践中不断的加以充实和完善
+                </p>
+            </li>
+            <li>
+                <img src="./images/td02.png">
+                <h4>
+                    安全</h4>
+                <p>
+                    让员工有一个良好的工作环境和一个积极向上的工作氛围，我们才能够为客户提供最为优质的服务
+                </p>
+            </li>
+            <li>
+                <img src="./images/td03.png">
+                <h4>
+                    方便</h4>
+                <p>
+                    “客户的认可和满意”是我们服务的最终结果，是检验公司工作的唯一标准
+                </p>
+            </li>
+            <li>
+                <img src="./images/td04.png">
+                <h4>
+                    快捷</h4>
+                <p>
+                    让客户“省时、省力a、省心、增值、有上帝感觉”是公司基本发展使命
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer indexbg">
+        <p>
+            <a href="index.html">首页</a> | <a href="order.html">快速下单</a> | <a href="service.html">
+                服务介绍</a> | <a href="superiority.html">美临优势</a> | <a href="member.html">加入会员</a>
+            | <a href="news.html">新闻动态</a> | <a href="job.html">美临招聘</a> | <a href="about.html">
+                关于我们</a>
+        </p>
+        <p>
+            Copyright ◎2010-2018美临家政 版权所有
+        </p>
+    </div>
+    <!-- 客服代码 开始 -->
+    <script type="text/javascript">
+        //added by blank 2016-3-13
+        var eid = '218808P8z8p8P8Q8z8K8z';
+        function kf_openChatWindow(flag, wpadomain, kfguin) {
+            window.open('http://' + wpadomain + '.qq.com/webc.htm?new=0&sid=' + kfguin + '&eid=' + eid + '&o=&q=7', '_blank', 'height=544, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');
+            if (flag == 1) {
+                kf_hidekfpopup();
+            }
+            return false;
+        }
+        //added by blank 2016-3-13 end
+
+</script>
+    <div id="leftsead">
+        <ul>
+            <li><a href="javascript:void(0)" class="youhui">
+                <img src="./images/l02.png" width="47" height="49" class="shows">
+                <img src="./images/a.png" width="57" height="49" class="hides">
+                <img src="./images/wexin.png" width="145" class="2wm" style="display: none; margin: -100px 57px 0 0">
+            </a></li>
+            <li><a href="javascript:void(0)">
+                <div class="hides" style="width: 161px; display: none;" id="qq">
+                    <div class="hides" id="p1">
+                        <img src="./images/l04.png">
+                    </div>
+                    <div class="hides" id="p2">
+                        <span style="color: #FFF; font-size: 16px">QQ:315755468</span>
+                    </div>
+                </div>
+                <img src="./images/l04.png" width="47" height="49" class="shows">
+            </a></li>
+            <li id="tel"><a href="javascript:void(0)">
+                <div class="hides" style="width: 161px; display: none;" id="tels">
+                    <div class="hides" id="p1">
+                        <img src="./images/l05.png">
+                    </div>
+                    <div class="hides" id="p3">
+                        <span style="color: #FFF; font-size: 14px">400-6993-111</span>
+                    </div>
+                </div>
+                <img src="./images/l05.png" width="47" height="49" class="shows">
+            </a></li>
+            <li id="btn"><a id="top_btn">
+                <div class="hides" style="width: 161px; margin-right: -163px; display: none;">
+                    <img src="./images/ll06.png" width="161" height="49">
+                </div>
+                <img src="./images/l06.png" width="47" height="49" class="shows" style="display: block;">
+            </a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#leftsead a").hover(function () {
+                if ($(this).prop("className") == "youhui") {
+                    $(this).children("img.hides").show();
+                } else {
+                    $(this).children("div.hides").show();
+                    $(this).children("img.shows").hide();
+                    $(this).children("div.hides").animate({
+                        marginRight: '0px'
+                    }, '0');
+                }
+            }, function () {
+                if ($(this).prop("className") == "youhui") {
+                    $(this).children("img.hides").hide();
+                } else {
+                    $(this).children("div.hides").animate({
+                        marginRight: '-163px'
+                    }, 0, function () {
+                        $(this).hide();
+                        $(this).next("img.shows").show();
+                    });
+                }
+            });
+
+            $("#top_btn").click(function () {
+                if (scroll == "off")
+                    return;
+                $("html,body").animate({
+                    scrollTop: 0
+                }, 600);
+            });
+
+            //右侧导航 - 二维码
+            $(".youhui").mouseover(function () {
+                $(this).children(".2wm").show();
+            })
+            $(".youhui").mouseout(function () {
+                $(this).children(".2wm").hide();
+            });
+
+        });
+
+</script>
+    <!--客服代码结束-->
+    <script src="./js/slide.js"></script>
+    <script type="text/javascript">
+        function nokaifa() {
+            alert("开发中，敬请期待！");
+        }
+    </script>
+</body>
+</html>
